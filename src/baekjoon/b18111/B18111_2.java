@@ -2,7 +2,7 @@ package baekjoon.b18111;
 
 import java.util.Scanner;
 
-public class B18111 {
+public class B18111_2 {
 
 	public static int max = Integer.MIN_VALUE;
 	public static int min = Integer.MAX_VALUE;
@@ -33,26 +33,26 @@ public class B18111 {
 		while (true) {
 			int middle = (start + end) / 2;
 
-			int preMid = checkTime(middle - 1);
-			int mid = checkTime(middle);
-			int postMid = checkTime(middle + 1);
+			int S = checkTime(start);
+			int M = checkTime(middle);
+			int E = checkTime(end);
 
-			if (checkTime(middle) == Integer.MAX_VALUE || ((preMid < mid) && (mid < postMid))) {
+			if (checkTime(middle) == Integer.MAX_VALUE || ((S < M) && (M < E))) {
 				end = middle - 1;
 //				if (checkTime(middle) == Integer.MAX_VALUE)
 //					System.out.println("블럭 부족 : end = middle");
 //				System.out.println("단조증가 : end = middle");
-			} else if ((preMid > mid) && (mid > postMid)) {
+			} else if ((S > M) && (M > E)) {
 				start = middle + 1;
 //				System.out.println("단조감소 : start = middle");
-			} else if ((preMid > mid) && (mid < postMid)) {
+			} else if ((S > M) && (M < E)) {
 				ansFloor = middle;
 //				System.out.println("mid 발견");
 				break;
-			} else if ((preMid == mid) || (mid == postMid)) {
-				if (preMid == mid)
+			} else if ((S == M) || (M == E)) {
+				if (S == M)
 					ansFloor = middle;
-				else if (mid == postMid)
+				else if (M == E)
 					ansFloor = middle + 1;
 				break;
 			}
