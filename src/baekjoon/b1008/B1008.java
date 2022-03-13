@@ -11,7 +11,6 @@ public class B1008 {
 		
 		System.out.println(A/B);
 		
-		
 		input.close();
 		
 	}
