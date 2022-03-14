@@ -4,16 +4,15 @@ import java.util.Scanner;
 
 public class B2775 {
 
-	public static int[][] apart = new int[15][15];
-	private static int k, n;
-
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 
 		int T = input.nextInt();
 		for (int tc = 1; tc <= T; tc++) {
-			k = input.nextInt();
-			n = input.nextInt();
+			int k = input.nextInt();
+			int n = input.nextInt();
+
+			int[][] apart = new int[15][15];
 
 			for (int j = 0; j <= n; j++) {
 				apart[0][j] = j;
