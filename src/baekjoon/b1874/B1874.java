@@ -1,21 +1,26 @@
 package baekjoon.b1874;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Stack;
+import java.util.StringTokenizer;
 
 public class B1874 {
 
 	private static Stack<Integer> stack = new Stack<>();
 	private static int cnt = 0;
 
-	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
 
-		int n = input.nextInt();
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		int n = Integer.parseInt(st.nextToken());
 		int[] series = new int[n];
 		for (int i = 0; i < n; i++) {
-			series[i] = input.nextInt();
+			st = new StringTokenizer(br.readLine());
+			series[i] = Integer.parseInt(st.nextToken());
 		}
 
 		for (int i = 0; i < n; i++) {
@@ -33,7 +38,6 @@ public class B1874 {
 				while (true) {
 					if (stack.isEmpty() || stack.peek() < series[i]) {
 						System.out.println("NO");
-						input.close();
 						return;
 					} else if (stack.peek() == series[i]) {
 						stack.pop();
@@ -47,8 +51,6 @@ public class B1874 {
 		}
 
 		System.out.print(sb);
-
-		input.close();
 
 	}
 
