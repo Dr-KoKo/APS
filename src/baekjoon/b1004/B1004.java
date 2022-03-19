@@ -11,9 +11,10 @@ public class B1004 {
 		
 		StringTokenizer input = new StringTokenizer(br.readLine());
 		
-		int[] ans = new int[2+1];
 		
 		int T = Integer.parseInt(input.nextToken());
+		int[] ans = new int[T+1];
+		
 		for (int tc = 1; tc <= T; tc++) {
 			input = new StringTokenizer(br.readLine()," ");
 			int[] start = new int[2];
