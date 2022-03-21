@@ -52,10 +52,9 @@ public class B1012 {
 				int target = map[r][c];
 				switch (target) {
 				case 0:
-				case 2:
 					continue;
 				case 1:
-					map[r][c] = 2;
+					map[r][c] = 0;
 					assign(r, c);
 					break;
 				}

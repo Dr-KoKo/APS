@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 public class B11650 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringBuilder sb = new StringBuilder();		
+		StringBuilder sb = new StringBuilder();
 		
 		StringTokenizer input = new StringTokenizer(br.readLine(), " ");
 		int N = Integer.parseInt(input.nextToken());
@@ -19,7 +19,7 @@ public class B11650 {
 			arr[i][0] = Integer.parseInt(input.nextToken());
 			arr[i][1] = Integer.parseInt(input.nextToken());
 		}
-		
+		// 첫번째 sorting
 		int[] count = new int[2*100000+1];
 		for (int i = 0; i < N; i++) {
 			++count[arr[i][1]+100000];
@@ -34,7 +34,7 @@ public class B11650 {
 			sorted_1[--count[arr[i][1]+100000]] = arr[i];
 		}
 		
-		
+		// 두번째 sorting
 		count = new int[2*100000+1];
 		for (int i = 0; i < N; i++) {
 			++count[sorted_1[i][0]+100000];
