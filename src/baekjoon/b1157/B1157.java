@@ -32,7 +32,7 @@ public class B1157 {
 			}
 		}
 
-		System.out.printf("%c", 'a' + idx);
+		System.out.printf("%c", 'A' + idx);
 
 	}
 }
