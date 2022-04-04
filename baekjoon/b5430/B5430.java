@@ -29,7 +29,7 @@ public class B5430 {
 			Deque<Integer> dq = new ArrayDeque<>();
 
 			for (int s = 0; s < str.length; s++) {
-				
+
 				try {
 					dq.add(Integer.parseInt(str[s]));
 				} catch (Exception e) {
@@ -76,6 +76,8 @@ public class B5430 {
 			}
 
 		}
+		
+		input.close();
 
 	}
 
