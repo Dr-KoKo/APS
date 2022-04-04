@@ -18,6 +18,7 @@ public class B4949 {
 			// 그런데 그 첫 값이 .이면 테스트 실행 X
 			if(line[0]=='.')
 				continue;
+			
 			// 테스트 실행
 			outer: for (int i = 0; i < line.length; i++) {
 
