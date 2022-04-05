@@ -76,7 +76,7 @@ public class B5430 {
 			}
 
 		}
-		
+
 		input.close();
 
 	}
