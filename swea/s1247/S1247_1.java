@@ -79,6 +79,7 @@ public class S1247_1 {
 
 			visited[i] = false;
 
+			// 삽입, 삭제가 용이한 자료구조가 유리할 것 : LinkedList??
 			// dist를 인자로 넘겨주면 result배열 및 visit배열 없이 만들 수 있을지도?
 			// deque를 쓰면 result배열 및 visit배열 없이 만들 수 있을지도?
 		}
