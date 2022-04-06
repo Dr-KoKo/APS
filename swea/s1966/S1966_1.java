@@ -2,7 +2,7 @@ package s1966;
 
 import java.util.Scanner;
 
-public class Solution {
+public class S1966_1 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 
