@@ -20,8 +20,8 @@ public class B5430 {
 			char[] order = input.nextLine().toCharArray();
 
 			int n = input.nextInt();
-
 			input.nextLine();
+			
 			String temp = input.nextLine();
 
 			String[] str = temp.substring(1, temp.length() - 1).split(",");

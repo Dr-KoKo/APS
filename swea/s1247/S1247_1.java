@@ -56,15 +56,20 @@ public class S1247_1 {
 
 		boolean[] visited = new boolean[N];
 
-		permUtil(0, visited, new Pos[N]);
+		permUtil(0, home, 0, visited);
 
 	}
 
-	private static void permUtil(int idx, boolean[] visited, Pos[] result) {
+	private static void permUtil(int idx, Pos exPos, int dist, boolean[] visited) {
+
+		if (dist >= ans)
+			return;
 
 		if (idx == N) {
 
-			calDist(result);
+			dist += Math.abs(work.r - exPos.r) + Math.abs(work.c - exPos.c);
+
+			ans = Math.min(ans, dist);
 
 		}
 
@@ -73,9 +78,10 @@ public class S1247_1 {
 			if (visited[i])
 				continue;
 
-			result[idx] = data[i];
 			visited[i] = true;
-			permUtil(idx + 1, visited, result);
+			Pos newPos = new Pos(data[i].r, data[i].c);
+
+			permUtil(idx + 1, newPos, dist + Math.abs(newPos.r - exPos.r) + Math.abs(newPos.c - exPos.c), visited);
 
 			visited[i] = false;
 
@@ -84,23 +90,6 @@ public class S1247_1 {
 			// deque를 쓰면 result배열 및 visit배열 없이 만들 수 있을지도?
 		}
 
-	}
-
-	private static void calDist(Pos[] result) {
-
-		int ret = 0;
-
-		ret += Math.abs(result[0].r - home.r) + Math.abs(result[0].c - home.c);
-
-		for (int i = 1; i < N; i++) {
-
-			ret += Math.abs(result[i].r - result[i - 1].r) + Math.abs(result[i].c - result[i - 1].c);
-
-		}
-
-		ret += Math.abs(result[N - 1].r - work.r) + Math.abs(result[N - 1].c - work.c);
-
-		ans = Math.min(ans, ret);
 	}
 
 }
