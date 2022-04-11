@@ -35,11 +35,11 @@ public class S1952 {
 			sb.append("#").append(tc);
 			sb.append(" ").append(ans);
 			sb.append("\n");
-			
+
 		}
-		
+
 		System.out.print(sb);
-		
+
 		input.close();
 
 	}
@@ -62,8 +62,7 @@ public class S1952 {
 			return;
 		}
 
-		calUtil(idx + 1, cost + plan[idx] * day);
-		calUtil(idx + 1, cost + mon);
+		calUtil(idx + 1, cost + Math.min(plan[idx] * day, mon));
 		calUtil(idx + 3, cost + tMon);
 
 	}
