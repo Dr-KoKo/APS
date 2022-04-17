@@ -1,13 +1,13 @@
-package s13636;
+package swea.s13636;
 
 import java.util.Scanner;
 
 public class Solution {
-	public static Scanner input = new Scanner(System.in);
+	static Scanner input = new Scanner(System.in);
+	static StringBuffer sb = new StringBuffer();
 
 	public static void main(String[] args) {
 		int T = input.nextInt();
-		int[] ans = new int[T + 1];
 
 		for (int tc = 1; tc <= T; tc++) {
 			int N = input.nextInt();
@@ -15,12 +15,10 @@ public class Solution {
 
 			char[] series = input.nextLine().toCharArray();
 
-			ans[tc] = cal(series);
+			sb.append("#").append(tc).append(" ").append(cal(series)).append("\n");
 		}
 
-		for (int tc = 1; tc <= T; tc++) {
-			System.out.printf("#%d %d\n", tc, ans[tc]);
-		}
+		System.out.print(sb);
 		
 	}
 

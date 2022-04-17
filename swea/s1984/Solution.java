@@ -1,16 +1,17 @@
-package s1984;
+package swea.s1984;
 
 import java.util.Scanner;
 
 public class Solution {
-	public static Scanner input = new Scanner(System.in);
+	static Scanner input = new Scanner(System.in);
+	static StringBuffer sb = new StringBuffer();
 
 	public static void main(String[] args) {
 		int T = input.nextInt();
 
 		for (int tc = 1; tc <= T; tc++) {
-			int max = 0;
-			int min = 10000;
+			int max = Integer.MIN_VALUE;
+			int min = Integer.MAX_VALUE;
 			double sum = 0.0;
 
 			for (int i = 0; i < 10; i++) {
@@ -19,10 +20,14 @@ public class Solution {
 				min = Math.min(min, num);
 				sum += num;
 			}
+
 			int avgEdgeDel = (int) ((sum - max - min + 4) / 8);
 
-			System.out.printf("#%d %d\n", tc, avgEdgeDel);
-		}
-	}
+			sb.append("#").append(tc).append(" ").append(avgEdgeDel).append("\n");
 
+		}
+
+		System.out.print(sb);
+
+	}
 }

@@ -1,4 +1,4 @@
-package s3499;
+package swea.s3499;
 
 import java.util.LinkedList;
 import java.util.Queue;

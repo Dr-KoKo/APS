@@ -44,6 +44,30 @@ public class S7465 {
 
 	}
 
+	private static void initiateSet(int people) {
+
+		p = new int[people + 1];
+		rank = new int[people + 1];
+
+		makeAllSet(people);
+
+	}
+
+	private static void makeAllSet(int people) {
+
+		for (int i = 0; i <= people; i++) {
+			makeSet(i);
+		}
+
+	}
+
+	private static void makeSet(int n) {
+
+		p[n] = n;
+		rank[n] = 0;
+
+	}
+
 	private static void union(int nextInt, int nextInt2) {
 
 		link(findSet(nextInt), findSet(nextInt2));
@@ -68,30 +92,6 @@ public class S7465 {
 			return x;
 		else
 			return p[x] = findSet(p[x]);
-
-	}
-
-	private static void initiateSet(int people) {
-
-		p = new int[people + 1];
-		rank = new int[people + 1];
-
-		makeAllSet(people);
-
-	}
-
-	private static void makeAllSet(int people) {
-
-		for (int i = 0; i <= people; i++) {
-			makeSet(i);
-		}
-
-	}
-
-	private static void makeSet(int n) {
-
-		p[n] = n;
-		rank[n] = 0;
 
 	}
 

@@ -1,81 +1,51 @@
-package s4613;
+package swea.s4613;
 
 import java.util.Scanner;
 
 public class Solution {
-	
-	private static int N,M;
-	private static int WBLine,BRLine;
-	
+	public static Scanner input = new Scanner(System.in);
+
 	public static void main(String[] args) {
-		
-		Scanner input = new Scanner(System.in);
-		
 		int T = input.nextInt();
-		
 		for (int tc = 1; tc <= T; tc++) {
-			
-			N = input.nextInt();
-			M = input.nextInt();
+			int N = input.nextInt();
+			int M = input.nextInt();
 			input.nextLine();
-			
 			char[][] flag = new char[N][M];
-			
 			for (int i = 0; i < N; i++) {
-				
 				flag[i] = input.nextLine().toCharArray();
-				
 			}
 
-			int ans = combWithFor(flag);
-//			int ans = comb(flag);
-//			int ans = comb(flag);
-			
+			int sumMin = Integer.MAX_VALUE;
 
-		}
-		
-		input.close();
-		
-	}
-	
-	private static int combWithFor(char[][] flag) {
-		
-		int sumMin = Integer.MAX_VALUE;
+			for (int WBline = 1; WBline < N - 1; WBline++) {
+				for (int BRline = WBline + 1; BRline < N; BRline++) {
+					int sum = 0;
 
-		for (int WBLine = 1; WBLine < N - 1; WBLine++) {
-			for (int BRLine = WBLine + 1; BRLine < N; BRLine++) {
-				
-				int sum = 0;
-
-				for (int w = 0; w < WBLine; w++) {
-					for (int m = 0; m < M; m++) {
-						if (flag[w][m] != 'W')
-							sum++;
+					for (int w = 0; w < WBline; w++) {
+						for (int m = 0; m < M; m++) {
+							if (flag[w][m] != 'W')
+								sum++;
+						}
 					}
-				}
-				
-				for (int b = WBLine; b < BRLine; b++) {
-					for (int m = 0; m < M; m++) {
-						if (flag[b][m] != 'B')
-							sum++;
+					for (int b = WBline; b < BRline; b++) {
+						for (int m = 0; m < M; m++) {
+							if (flag[b][m] != 'B')
+								sum++;
+						}
 					}
-				}
-				
-				for (int r = BRLine; r < N; r++) {
-					for (int m = 0; m < M; m++) {
-						if (flag[r][m] != 'R')
-							sum++;
+					for (int r = BRline; r < N; r++) {
+						for (int m = 0; m < M; m++) {
+							if (flag[r][m] != 'R')
+								sum++;
+						}
 					}
+					sumMin = Math.min(sumMin, sum);
 				}
-				
-				sumMin = Math.min(sumMin, sum);
-				
 			}
-			
+
+			System.out.printf("#%d %d\n", tc, sumMin);
+
 		}
-		
-		return sumMin;
-		
 	}
-	
 }

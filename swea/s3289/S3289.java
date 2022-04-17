@@ -1,5 +1,6 @@
 package s3289;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class S3289 {
@@ -27,7 +28,7 @@ public class S3289 {
 				int order = input.nextInt();
 				switch (order) {
 				case 1:
-					if (findSet(input.nextInt()) == findSet(input.nextInt()))
+					if (search(input.nextInt(), input.nextInt()))
 						sb.append(1);
 					else
 						sb.append(0);
@@ -52,12 +53,25 @@ public class S3289 {
 
 		p = new int[N + 1];
 		rank = new int[N + 1];
+		Arrays.fill(p, -1);
+
+		makeAllSets(N);
+
+	}
+
+	private static void makeAllSets(int N) {
 
 		for (int i = 0; i <= N; i++) {
-			p[i] = i;
-			rank[i] = 0;
+
+			makeSet(i);
+
 		}
 
+	}
+
+	private static void makeSet(int i) {
+		p[i] = i;
+		rank[i] = 0;
 	}
 
 	private static void merge(int nextInt, int nextInt2) {
@@ -76,6 +90,10 @@ public class S3289 {
 				++rank[findSet2];
 		}
 
+	}
+
+	private static boolean search(int nextInt, int nextInt2) {
+		return findSet(nextInt) == findSet(nextInt2);
 	}
 
 	private static int findSet(int x) {

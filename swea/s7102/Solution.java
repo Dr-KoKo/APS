@@ -1,4 +1,4 @@
-package s7102;
+package swea.s7102;
 
 import java.util.Scanner;
 
