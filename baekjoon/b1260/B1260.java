@@ -3,6 +3,8 @@ package b1260;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -22,11 +24,11 @@ public class B1260 {
 		int M = Integer.parseInt(input.nextToken());
 		int V = Integer.parseInt(input.nextToken());
 
-		adj = new LinkedList[N+1];
+		adj = new LinkedList[N + 1];
 		for (int i = 1; i <= N; i++) {
 			adj[i] = new LinkedList();
 		}
-		
+
 		for (int i = 0; i < M; i++) {
 			input = new StringTokenizer(br.readLine());
 			int head = Integer.parseInt(input.nextToken());
@@ -35,6 +37,7 @@ public class B1260 {
 			adj[head].add(tail);
 			adj[tail].add(head);
 		}
+		
 		for (int i = 1; i <= N; i++) {
 			adj[i].sort(Comparator.naturalOrder());
 		}
@@ -46,7 +49,7 @@ public class B1260 {
 	}
 
 	private static void DFS(int v) {
-		boolean[] visited = new boolean[N+1];
+		boolean[] visited = new boolean[N + 1];
 		DFSUtil(v, visited);
 		sb.append("\n");
 	}
@@ -65,7 +68,7 @@ public class B1260 {
 	}
 
 	private static void BFS(int v) {
-		boolean[] visited = new boolean[N+1];
+		boolean[] visited = new boolean[N + 1];
 		LinkedList<Integer> queue = new LinkedList<>();
 
 		visited[v] = true;
