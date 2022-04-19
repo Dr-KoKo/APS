@@ -1,4 +1,4 @@
-package swea.s1959;
+package s1959;
 
 import java.util.Scanner;
 

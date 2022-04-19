@@ -1,4 +1,4 @@
-package swea.s1940;
+package s1940;
 
 import java.util.Scanner;
 

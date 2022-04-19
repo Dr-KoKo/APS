@@ -1,4 +1,4 @@
-package swea.s2805;
+package s2805;
 
 import java.util.Scanner;
 

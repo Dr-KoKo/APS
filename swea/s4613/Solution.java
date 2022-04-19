@@ -1,4 +1,4 @@
-package swea.s4613;
+package s4613;
 
 import java.util.Scanner;
 

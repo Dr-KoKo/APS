@@ -1,4 +1,4 @@
-package swea.s1860;
+package s1860;
 
 import java.util.Arrays;
 import java.util.Scanner;

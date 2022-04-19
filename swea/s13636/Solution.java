@@ -1,4 +1,4 @@
-package swea.s13636;
+package s13636;
 
 import java.util.Scanner;
 

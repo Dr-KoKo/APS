@@ -1,4 +1,4 @@
-package swea.s2063;
+package s2063;
 
 import java.util.Scanner;
 
