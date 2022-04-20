@@ -1,4 +1,4 @@
-package swea.s1966;
+package s1966;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package swea.s1249;
+package s1249;
 
 import java.io.BufferedReader;
 import java.io.IOException;

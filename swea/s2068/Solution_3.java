@@ -1,4 +1,4 @@
-package swea.s2068;
+package s2068;
 
 import java.util.PriorityQueue;
 import java.util.Scanner;

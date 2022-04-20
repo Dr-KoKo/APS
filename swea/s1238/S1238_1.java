@@ -1,4 +1,4 @@
-package swea.s1238;
+package s1238;
 
 import java.util.Collections;
 import java.util.Iterator;

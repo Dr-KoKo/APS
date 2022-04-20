@@ -1,4 +1,4 @@
-package swea.s5650;
+package s5650;
 
 import java.util.Scanner;
 
