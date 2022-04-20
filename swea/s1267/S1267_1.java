@@ -1,4 +1,4 @@
-package swea.s1267;
+package s1267;
 
 import java.util.HashSet;
 import java.util.Iterator;

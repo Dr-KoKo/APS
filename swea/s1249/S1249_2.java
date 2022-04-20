@@ -1,4 +1,4 @@
-package swea.s1249;
+package s1249;
 
 import java.util.PriorityQueue;
 import java.util.Scanner;

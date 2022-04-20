@@ -1,4 +1,4 @@
-package swea.s2383;
+package s2383;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
