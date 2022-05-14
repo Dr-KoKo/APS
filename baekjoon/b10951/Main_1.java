@@ -11,6 +11,7 @@ public class Main_1 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		
 		String str;
 
 		while ((str = br.readLine()) != null) {
@@ -19,12 +20,10 @@ public class Main_1 {
 			int A = Integer.parseInt(st.nextToken());
 			int B = Integer.parseInt(st.nextToken());
 
-			System.out.println(A + B);
-
-//			bw.write(A + B + " ").;
+			bw.write(A + B + " ");
 		}
-
-//		bw.flush();
+		
+		bw.flush();
 
 	}
 }
