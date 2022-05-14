@@ -2,7 +2,7 @@ package b1110;
 
 import java.util.Scanner;
 
-public class Main {
+public class Main_1 {
 	static int cnt = 0;
 	static int inputInt;
 
