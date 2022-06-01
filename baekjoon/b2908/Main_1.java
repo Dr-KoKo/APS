@@ -7,7 +7,7 @@ public class Main_1 {
 		Scanner input = new Scanner(System.in);
 		
 		int a = Integer.parseInt(new StringBuilder(input.next()).reverse().toString());
-		int b = Integer.parseInt(new StringBuilder(input.next()).reverse().toString());
+		int b = Integer.parseInt(new StringBuffer(input.next()).reverse().toString());
 
 		if(a>b) {
 			System.out.println(a);
