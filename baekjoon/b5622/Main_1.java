@@ -16,7 +16,7 @@ public class Main_1 {
 				ans += 8;
 			} else if(ch>='T' && ch<='V') {
 				ans += 9;
-			} else if(ch<='W'&&ch<='Z') {
+			} else if(ch>='W'&&ch<='Z') {
 				ans += 10;
 			}
 		}
