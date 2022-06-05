@@ -13,7 +13,7 @@ public class B1152_2 {
 
 		int cnt = 0;
 		while (input.hasMoreTokens()) {
-			if (input.nextToken().equals("")) {
+			if (input.nextToken().length()==0) {
 				continue;
 			}
 			++cnt;

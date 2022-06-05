@@ -10,7 +10,7 @@ public class B1152 {
 		
 		int cnt = 0;
 		for (int i = 0; i < str.length; i++) {
-			if(!str[i].equals("")) {
+			if(str[i].length()!=0) {
 				cnt++;
 			}
 		}
