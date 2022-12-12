@@ -1,8 +1,8 @@
-package b15652;
+package baekjoon;
 
 import java.util.Scanner;
 
-public class B15652 {
+public class B15652_1 {
 
 	public static void main(String[] args) {
 
