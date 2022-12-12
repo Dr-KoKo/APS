@@ -1,8 +1,8 @@
-package b15651;
+package baekjoon;
 
 import java.util.Scanner;
 
-public class B15651 {
+public class B15651_1 {
 
 	static StringBuilder sb;
 
