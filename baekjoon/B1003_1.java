@@ -1,8 +1,8 @@
-package b1003;
+package baekjoon;
 
 import java.util.Scanner;
 
-public class B1003 {
+public class B1003_1 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
@@ -19,7 +19,7 @@ public class B1003 {
 			}
 		}
 
-		int T = input.nextInt();
+		int T = input.nextInt(); 
 		for (int tc = 1; tc <= T; tc++) {
 			int n = input.nextInt();
 
