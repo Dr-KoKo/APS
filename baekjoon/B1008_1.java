@@ -1,8 +1,8 @@
-package b1008;
+package baekjoon;
 
 import java.util.Scanner;
 
-public class B1008 {
+public class B1008_1 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		
