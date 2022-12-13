@@ -1,8 +1,8 @@
-package b1012;
+package baekjoon;
 
 import java.util.Scanner;
 
-public class B1012 {
+public class B1012_1 {
 
 	private static int[][] drc = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } };
 
