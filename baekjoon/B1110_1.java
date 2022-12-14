@@ -1,24 +1,30 @@
-package b1110;
+package baekjoon;
 
 import java.util.Scanner;
 
-public class Main_1 {
-	static int cnt = 0;
-	static int inputInt;
+public class B1110_1 {
+	private static int cnt = 0;
+	private static int inputInt;
 
 	public static void main(String[] args) {
+		input();
+		cycle(inputInt);
+		print();
+	}
+
+	private static void print() {
+		System.out.println(cnt);
+	}
+
+	private static void input() {
 		Scanner input = new Scanner(System.in);
 
 		inputInt = input.nextInt();
-		input.close();
-		if (inputInt < 10) {
-			inputInt *= 10;
-		}
 
-		System.out.println(cycle(inputInt));
+		input.close();
 	}
 
-	public static int cycle(int n) {
+	private static void cycle(int n) {
 		int fd = n / 10;
 		int sd = n % 10;
 
@@ -27,10 +33,10 @@ public class Main_1 {
 
 		int temp = sd * 10 + nsd;
 		if (temp == inputInt) {
-			return ++cnt;
+			++cnt;
 		} else {
 			++cnt;
-			return cycle(temp);
+			cycle(temp);
 		}
 	}
 }
