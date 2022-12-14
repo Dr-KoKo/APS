@@ -1,8 +1,8 @@
-package b1065;
+package baekjoon;
 
 import java.util.Scanner;
 
-public class Main_2 {
+public class B1065_2 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 
