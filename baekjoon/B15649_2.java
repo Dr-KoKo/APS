@@ -41,8 +41,6 @@ public class B15649_2 {
                 ans[k] = 0;
                 visited[cand] = false;
             }
-
         }
-
     }
 }
