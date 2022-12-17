@@ -2,7 +2,6 @@ package baekjoon;
 
 import java.util.Scanner;
 import java.util.Stack;
-import java.util.StringTokenizer;
 
 public class B10828_1 {
     private static int N;
