@@ -1,8 +1,8 @@
-package b1236;
+package baekjoon;
 
 import java.util.Scanner;
 
-public class Main {
+public class B1236_1 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 

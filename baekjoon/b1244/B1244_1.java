@@ -2,7 +2,7 @@ package b1244;
 
 import java.util.Scanner;
 
-public class Main {
+public class B1244_1 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
