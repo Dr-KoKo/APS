@@ -20,7 +20,6 @@ public class P42746 {
         }
 
         if (sb.charAt(0) == '0') return "0";
-
         return sb.toString();
     }
 }
