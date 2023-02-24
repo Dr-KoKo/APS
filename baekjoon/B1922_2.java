@@ -60,6 +60,7 @@ public class B1922_2 {
         if(p[node]==node) return node;
         return p[node] = getParent(p[node]);
     }
+
     private static class Edge {
         int from, to;
         int cost;
