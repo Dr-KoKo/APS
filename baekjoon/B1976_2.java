@@ -50,11 +50,11 @@ public class B1976_2 {
         int p2 = getParent(node2);
 
         if (rank[p1] >= rank[p2]) {
-            rank[p2] = p1;
+            p[p2] = p1;
             if (rank[p1] == rank[p2])
                 rank[p1]++;
         } else {
-            rank[p1] = p2;
+            p[p1] = p2;
         }
     }
 
